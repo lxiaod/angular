@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="">
+$rootScope
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="angular.js"></script>
+    <script src="angular-ui-router.js"></script>
+</head>
+<body>
+
+<div ng-controller="div">
+    $scope.name = 'tt'
+    <div ng-controller="div1">
+        $scope.name = 'dd'
+
+    </div>
+    <div ng-controller="div2">
+        $scope.name = 'wjj'
+    </div>
+    <div ng-controller="div3">
+        $scope.name = 'lzy';
+        $scope.age = 20;
+    </div>
+
+</div>
+</body>
+</html>

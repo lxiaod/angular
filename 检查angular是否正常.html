@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+<!--凡是ng开头的都是angular内置的指令-->
+<!--   {{}} 是显示数据的格式    -->
+<div ng-app="" ng-init="name='lizhiyuan'">
+    hello <span ng-bind="name"></span>
+</div>
+</body>
+</html>
+<script>
+    window.onload = function(){
+        setTimeout(function(){
+            console.log('等待三秒吧');
+        },3000)
+    }
+</script>
+<!--使用angularJS的第一步就是先引入angular.js文件-->
+<script src="angular.js"></script>
+<!--第二步是引入angular的第三方的插件-->
+<script src="angular-ui-router.js"></script>
+
+<!--angularJS的一个执行流程是等待HTML中所有的DOM节点加载完之后才进行解析的-->
+<!--它会把所有的ng开头的指令解析成正常的HTML显示出来-->
+<!--{{}}有个问题就是当angular还未解析的时候，在DOM解析阶段，会显示内容 -->
+<!--所以，这里推荐大家，在显示数据的时候，使用ng-bind 显示，就不会出现上述问题了-->
